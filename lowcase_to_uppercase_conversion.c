@@ -7,7 +7,7 @@
 	{
 
 	/* Arrays for conversion */
-	char  lowcase[27] = "abcdefghijklmnopqrstuvwxyz";
+    char  lowcase[27] = "abcdefghijklmnopqrstuvwxyz";
     char  uppercase[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 
