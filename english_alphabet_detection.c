@@ -7,6 +7,9 @@
 
 
 	{
+		if (argc < 2)
+		return 0;
+
 		int i = 0;
 
 			char englowcase[27] = "abcdefghijklmnopqrstuvwxyz";
