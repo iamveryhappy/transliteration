@@ -18,7 +18,6 @@
 		char englowcase[27] = "abcdefghijklmnopqrstuvwxyz";
 		char enguppercase[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-	printf("%lu", strlen(argv[1]));
 
 	for (j = 0; j != strlen(argv[1]); j++) {
 		for (i = 0; i != strlen(englowcase); i++) {
