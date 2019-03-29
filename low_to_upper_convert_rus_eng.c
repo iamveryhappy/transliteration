@@ -21,6 +21,7 @@
 		"ч", "ш", "щ", "ь", "ы", "ъ", "э", "ю", "я"
                      };
 
+		
     char * rus_upper[33] = { "А", "Б", "В", "Г", "Д", "Е",
 		"Ё", "Ж", "З", "И", "Й", "К", "Л", "М", "Н",
 		"О", "П", "Р", "С", "Т", "У", "Ф", "Х", "Ц",
@@ -29,9 +30,9 @@
 
 
 
-          char c[4]; /*Буфер. Buffer*/
-          int j = 0;
-          int i = 0;
+         		char c[4]; /*Буфер. Buffer*/
+          		int j = 0;
+          		int i = 0;
 
 
   /*Читаем строку по одному символу до знака конца строки "\0".
@@ -42,8 +43,8 @@
         /*Каждый четный цикл пишем в буфер. We are writing into buffer.
          each iteration, if 'j' is even number*/
        if (j%2 == 0) {
-           c[0]=rus[j];
-           c[1]=rus[j+1];
+        	  	c[0]=rus[j];
+           		c[1]=rus[j+1];
 
 
         /*Запишем символ конца строки. We add  symbol of the end of a string.*/
@@ -51,9 +52,10 @@
            i = 0;
 
             /*Сравним буфер и все строки массива. It compares
-             buffer and strings in array*/
+            buffer and strings in array*/
             while (i != 33) {
 
+		    
                 /*Проверим символ в массиве и напечатаем.
                  * Here we verify a character in the array and print it.*/
                 if (strcmp(c, rus_low[i])==0)   {
@@ -66,7 +68,7 @@
     }
 }
 
-/* Определение английского алфавита по первому символу */
+	/* Определение английского алфавита по первому символу */
 
 	int main (int argc, char * argv[])
 
@@ -87,13 +89,13 @@
 		for (i = 0; i != strlen(ENGLOWCASE); i++) {
 
 			if (argv[1][j] == ENGLOWCASE[i] || argv[1][0] == ENGUPPERCASE[i]) {
-			eng_case (ENGUPPERCASE[i]); /*Если английский символ*/
-			x = 1; 						/*Установим триггер в 1*/
+			eng_case (ENGUPPERCASE[i]);  	/*Если английский символ*/
+			x = 1; 			       	/*Установим триггер в 1*/
 			break;
 			}
 		}
 			if (x == 0) {           	/*Если триггер равен 0,
-										то функция преобразования всей строки*/
+							то функция преобразования всей строки*/
 			rus_case (argv[1]);
 			break;
 		}
